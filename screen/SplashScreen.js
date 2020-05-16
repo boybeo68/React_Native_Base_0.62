@@ -1,10 +1,10 @@
-import {View,Text} from 'react-native';
+import {View, ActivityIndicator} from 'react-native';
 import React from 'react';
 
-function SplashScreen() {
+export const SplashScreen = React.memo((props) => {
   return (
-    <View>
-      <Text>Loading...</Text>
+    <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <ActivityIndicator size="small" color="#00ff00" />
     </View>
   );
-}
+});

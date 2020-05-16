@@ -1,12 +1,12 @@
-import * as React from 'react';
+import React, {useState, useContext} from 'react';
 import {Button, TextInput, View} from 'react-native';
-const AuthContext = React.createContext();
+import {AuthContext} from '../redux/context/AuthContext';
 
-function SignInScreen() {
-  const [username, setUsername] = React.useState('');
-  const [password, setPassword] = React.useState('');
+export function SignInScreen() {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-  const { signIn } = React.useContext(AuthContext);
+  const {authContext} = useContext(AuthContext);
 
   return (
     <View>
@@ -21,7 +21,7 @@ function SignInScreen() {
         onChangeText={setPassword}
         secureTextEntry
       />
-      <Button title="Sign in" onPress={() => signIn({ username, password })} />
+      <Button title="Sign in" onPress={() => authContext.signIn({username, password})} />
     </View>
   );
 }
