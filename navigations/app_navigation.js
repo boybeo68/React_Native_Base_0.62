@@ -9,6 +9,7 @@ const Stack = createStackNavigator();
 
 const AuthNavigation = () => {
   const {state} = React.useContext(AuthContext);
+
   return (
     <Stack.Navigator>
       {state.isLoading ? (
@@ -20,12 +21,17 @@ const AuthNavigation = () => {
           name="SignIn"
           component={SignInScreen}
           options={{
-            title: 'Sign in',
+            headerTitle: null,
+            // title: 'Sign in',
             animationTypeForReplace: state.isSignout ? 'pop' : 'push',
           }}
         />
       ) : (
-        <Stack.Screen name="Home" component={HomeScreen} />
+        <Stack.Screen
+          name="Home"
+          options={{headerTitle: null}}
+          component={HomeScreen}
+        />
       )}
     </Stack.Navigator>
   );
