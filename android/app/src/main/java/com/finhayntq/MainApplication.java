@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.finhayntq;
 
 import android.app.Application;
 import android.content.Context;

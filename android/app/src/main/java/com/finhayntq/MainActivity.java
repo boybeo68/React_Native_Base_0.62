@@ -1,4 +1,4 @@
-package com.awesomeproject;
+package com.finhayntq;
 
 import com.facebook.react.ReactActivity;
 

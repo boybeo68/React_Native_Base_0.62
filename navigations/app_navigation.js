@@ -11,7 +11,7 @@ const AuthNavigation = () => {
   const {state} = React.useContext(AuthContext);
 
   return (
-    <Stack.Navigator>
+    <Stack.Navigator headerMode="none">
       {state.isLoading ? (
         // We haven't finished checking for the token yet
         <Stack.Screen name="Splash" component={SplashScreen} />

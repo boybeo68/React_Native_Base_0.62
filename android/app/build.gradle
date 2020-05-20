@@ -129,7 +129,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.ntq.finhay"
+        applicationId "com.finhayntq"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
